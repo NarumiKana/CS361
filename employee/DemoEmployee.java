@@ -4,7 +4,7 @@
 package employee;
 
 /**
- * @author ADD YOUR NAME
+ * @author Narumi Aguirre-Kanashiro
  *
  */
 
@@ -46,7 +46,11 @@ public class DemoEmployee {
 
 		// Downcasting 1
 		// TODO Uncomment and run the code
-		// PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
+		if (emp1 instanceof PartTimeEmployee) {
+			PartTimeEmployee pEmp3 = (PartTimeEmployee) emp1;
+		} else {
+			System.out.println("emp1 is not a part time employee.");
+		}
 		// TODO To complete
 		// This instruction compiles / does not compile
 		// This instruction returns a ClassCastException at run time
