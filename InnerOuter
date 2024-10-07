@@ -1,0 +1,22 @@
+public class InnerOuter {
+    public static int innermost (int n) {
+        System.out.println("Innermost:" + n);
+        if (n <= 1) {
+            return n;
+        }
+        return innermost(n - 1) + innermost(n - 2);
+    }
+
+    public static int outermost(int a, int b) {
+        System.out.println("Outermost: a = " + a + "b = " + b);
+        if (a <= 0 || b <= 0) {
+            return 1;
+        }
+        return outermost(a - 1, b - 1) + outermost(a - 2, b - 2);
+    }
+
+    public static void main (String[] args) {
+        System.out.println("Innermost(5): " + innermost(5));
+        System.out,println("Outermost(5, 5): " + outermost(5, 5));
+    }
+}
